@@ -29,9 +29,33 @@
 		1B8AA4C12E42EB1600069416 /* LemonRestaurantC2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LemonRestaurantC2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		1BD7FBA72E5552E10031F7AE /* Exceptions for "LemonRestaurantC2" folder in "LemonRestaurantC2" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				swift,
+			);
+			target = 1B8AA4A92E42EB1500069416 /* LemonRestaurantC2 */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		1BD7FBA82E5552E10031F7AE /* Exceptions for "LemonRestaurantC2" folder in "Compile Sources" phase from "LemonRestaurantC2" target */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			buildPhase = 1B8AA4A62E42EB1500069416 /* Sources */;
+			membershipExceptions = (
+				swift,
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		1B8AA4AC2E42EB1500069416 /* LemonRestaurantC2 */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				1BD7FBA72E5552E10031F7AE /* Exceptions for "LemonRestaurantC2" folder in "LemonRestaurantC2" target */,
+				1BD7FBA82E5552E10031F7AE /* Exceptions for "LemonRestaurantC2" folder in "Compile Sources" phase from "LemonRestaurantC2" target */,
+			);
 			path = LemonRestaurantC2;
 			sourceTree = "<group>";
 		};
