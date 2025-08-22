@@ -7,7 +7,8 @@
 
 import SwiftUI
 
-struct Menuview: View {
+struct MenuView: View {
+    
     /*
      let menuItems = [
      "Pizza": 9.99,
@@ -37,6 +38,44 @@ struct Menuview: View {
     var sortedMenuItems: [MenuItem] {
         menuItems.sorted{$0.price < $1.price}
     }
+    
+    // Assignment #3
+    // The number of premium items (price = $100
+    // OP1
+    var premiumCount: Int{
+        let premuimFilter =  menuItems.filter { item in
+            item.price >= 10
+        }
+        
+        return premuimFilter.count
+    }
+    //  OP2
+    var premiumCount2: Int {
+        menuItems.filter {$0.price >= 10}.count
+    }
+    // The number if regular items (price < $10)
+    // OP 1
+    var regularCount: Int {
+        let regularItems = menuItems.filter {item in
+            item.price < 10
+        }
+        
+        return regularItems.count
+    }
+    
+    //OP 2
+    var regularCount2: Int {
+        menuItems.filter { $0.price < 10}.count
+    }
+    
+    var totalPrice: Double {
+        let total = menuItems.reduce(0.0) { accumulator, item in
+            accumulator + item.price
+        }
+        
+        return total
+    }
+    
     @State private var showMessage:Bool = false
     @State private var showThankYouMessage:Bool = false
     @State private var showDesserts:Bool = false
@@ -135,12 +174,21 @@ struct Menuview: View {
                 DessertView()
             }
         }
-        //        List(menuItems){ item in
+
         List(sortedMenuItems){ item in
             MenuItemView(item: item)
         }
+
+        // Assignment #3
+        Text("Premium: \(premiumCount) | Regular: \(regularCount) | total: $\(totalPrice, specifier: "%.2f")")
+            .padding()
+            .background(.yellow.opacity(0.4))
+            .cornerRadius(12)
     }
 }
+
+
+
             /*List {
                 ForEach(menuItems.sorted(by: {$0.key > $1.key}), id: \.key){(name, price)
                     in
@@ -165,5 +213,5 @@ struct Menuview: View {
     */
 
 #Preview {
-    Menuview()
+    MenuView()
 }
